@@ -1,0 +1,147 @@
+ <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+      .Heading {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        color: #990000;
+      }
+      .switchimg {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+    <script>
+      function show_confirm() {
+        var ConfirmStatus = confirm("Press a button!");
+        if (ConfirmStatus == true) {
+          alert("You pressed OK!");
+        } else {
+          alert("You pressed Cancel!");
+        }
+      }
+      function show_prompt() {
+        var age = prompt("Please enter your Age", "7");
+        switch (age) {
+          case "1":
+            alert("still at school");
+            break;
+          case "2":
+            alert("still young");
+            break;
+          case "3":
+            alert("start lying");
+            break;
+          case "4":
+            alert("start saving");
+            break;
+          default:
+            alert("undetermined");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <div class="box">
+        <div class="row head1">
+          <div class="col-12 text-center">
+            <h2>Loops in Javascript</h2>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-8 mb-3">
+            <img src="./img/ifelse.png" class="switchimg">
+          </div>
+          <div class="col-md-4 d-flex flex-column justify-content-center">
+            <p>This example demonstrates the If...Else statement. And Confirm box</p>
+            <input type="button" class="btn btn-primary" onclick="show_confirm()" value="Click Me" />
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-8 mb-3">
+            <h2>Switch statement</h2>
+            <img src="./img/switch.png" class="switchimg">
+          </div>
+          <div class="col-md-4 d-flex flex-column justify-content-center">
+            <p>Now This example demonstrates Switch statement. And Prompt box</p>
+            <input type="button" class="btn btn-primary" onclick="show_prompt()" value="Now Click Me" />
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-8 mb-3">
+            <h2>For loop</h2>
+            <img src="./img/forloop.png" class="switchimg">
+          </div>
+          <div class="col-md-4 d-flex flex-column justify-content-center">
+            <h3>Output</h3>
+            <div>
+              <script language="javascript">
+                let counter = 0;
+                for (let start = 1; start < 5; start++) {
+                  counter = counter + 1;
+                  document.write("start = " + start + " counter = " + counter + "<br/>");
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-8 mb-3">
+            <h2>While Loop</h2>
+            <img src="./img/while.png" class="switchimg">
+          </div>
+          <div class="col-md-4 d-flex flex-column justify-content-center">
+            <h3>Output</h3>
+            <div>
+              <script language="javascript">
+                let start = 1;
+                let end = 1;
+                const times = 2;
+                let answer = 0;
+                while (end <= 5) {
+                  answer = start * times;
+                  start++;
+                  end++;
+                  document.write(" Answer = " + answer + "<br/>");
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-8 mb-3">
+            <h2>Do While Loop</h2>
+            <img src="./img/dowhile.png" class="switchimg">
+          </div>
+          <div class="col-md-4 d-flex flex-column justify-content-center">
+            <h3>Output</h3>
+            <div>
+              <script type="text/javascript">
+                let i = 0;
+                do {
+                  document.write("The number is " + i + "<br />");
+                  i++;
+                } while (i <= 5);
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <a href="index.html" class="btn btn-primary">Goto main</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
+  

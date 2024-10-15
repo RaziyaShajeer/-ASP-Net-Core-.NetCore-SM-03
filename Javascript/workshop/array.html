@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="style.css" type="text/css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <title>Document</title>
+   <style>
+     .Heading {
+       font-family: Arial, Helvetica, sans-serif;
+       font-weight: bold;
+       font-size: 16px;
+       color: #990000;
+   }
+   .hhh{
+    margin-top: 37px;
+   }
+  </style>
+  <script language="JavaScript">
+    function clickMe() {
+        var a = document.getElementById('text1').value;
+        document.getElementById('p1').innerHTML = a;
+       
+    }
+    </script>
+   
+
+   
+			
+ </head>
+ <body>
+  <div class="container">
+    <div class="box">
+      <div class="head1">
+        <h2>Arrays and Functions in Javascript</h2>
+      </div>
+      <div class="row">
+        <div class="col-8">
+          <img src="./img/array.png" class="imgar">
+          
+        </div>
+        
+        
+    
+
+      <div class="col-4"> 
+        <h3>Function call</h3>
+        <form>
+          <input type="text" id="text1">
+          <button type="button" onclick="clickMe()">ClickMe</button>
+        </form>
+        <p id="p1"></p>
+      </div>
+      
+<div class="row">
+ <h2>Function Call With Return Statement</h2>
+  
+  <div class="col-8"><img src="./img/return.png" class="imgar"></div>
+  <div class="col-4">	
+    <h4>Output</h4>
+    <script type="text/javascript">
+      function product(a, b) {
+        return a * b;
+       
+      }
+    </script>
+   <h5>12</h5>
+    			<p>The script in the body section calls a function with two parameters (4 and 3).</p>
+          <p>The function will return the product of these two parameters.</p>
+    </div>
+</div>
+
+<div class="row">
+  <h2 class="hhh">Arrays</h2>
+  <div class="col-8"><img src="./img/array3.png" class="imgar"></div>
+  <div class="col-4"><h4>Output</h4>
+    <p>Season:Winter</p>
+    
+    <p>Season:Spring</p>
+    
+    <p>Season:Summer</p>
+      
+    <p>Season:Autumn</p>
+        
+    <br></div>
+
+</div>
+    
+    </div>
+ </div>
+
+ <a href="index.html" class="btn btn-primary">Go to main</a>
+</body>
+ </html>
+ 
+ 

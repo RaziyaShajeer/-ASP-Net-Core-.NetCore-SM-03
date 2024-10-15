@@ -1,0 +1,87 @@
+.box{background-color: rgb(203, 235, 249);
+height: max-content;
+width:90%;
+position:relative;
+top:20%;
+margin-left:50px;}
+.head h2{
+   text-align: center;
+   margin-top: 30px;
+   font-size: 40px;
+}
+
+.head{
+    background-color: rgb(4, 46, 88);
+    width:100%;
+    color:aliceblue;
+}
+.section{
+    margin-top:50px;
+    margin-left: 30px;
+    margin-right: 30px;
+   
+}
+.hh{margin-top:50px;}
+.imgg{margin-left:40px;
+margin-top: 50px;}
+
+.imggg{width:200px;
+       height: 300px;}
+
+.logo{width: 200px;
+height: 200px;}
+
+
+       /* ----------event------------------------------ */
+
+       .box{ border: 1px solid green;}
+       .head1{ background-color:  rgb(4, 46, 88);
+        height: 80px;
+        color:aliceblue;
+        width:100%;
+       }
+    .imggevent{width: 700px;
+               height: 300px;
+               /* margin-left:20px; */
+               margin-top: 40px;
+            }
+
+    .mevents{
+        width: 700px;
+        height: 300px;
+     
+    }           
+
+    .eventr{margin-left:20px;
+        margin-top: 40px;}
+     .meventr{
+        margin-left:20px;
+        margin-top: 40px;
+     }   
+
+     .switchimg{
+        width:700px;
+        height: 425px;
+      
+        margin-top: 10px;
+
+     }
+
+     /* ------------------------------------------------------ */
+
+     .head1{ background-color: rgb(4, 46, 88);
+        height: 80px;
+        width:100%;
+        color: aliceblue;}
+
+    .switchimg1{
+        width:732px;
+        height: 425px;
+        
+
+     }
+
+     .imgar{width: 90%;
+      height: 90%;
+      margin-top: 24px;
+      margin-left: 58px;}
