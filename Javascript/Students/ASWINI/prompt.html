@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>prompt</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <input type="button" value="prompt" onclick="respprompt()"><br>
+    <script>
+        function respprompt(){
+            var favourite=prompt('what is your favourite color?','red');
+            if(favourite){
+                alert("your favourite color is:"+favourite);
+            }else{
+                alert("you pressed cancel or no value was entered!");
+            }
+        }
+    </script>
+    
+</body>
+</html>

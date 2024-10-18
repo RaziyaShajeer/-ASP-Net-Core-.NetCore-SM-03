@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body{
+            background-color: lightblue;
+            margin: 0;
+            padding: 0;
+        }
+        .button{
+            width:15px;
+            height: 20px;
+            padding: 70px;
+            background-color:blue;
+            justify-content: center;
+            margin-top: 9PX;
+            margin-left: 9px;
+            
+                        
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <button type="button" onclick= "showprompt()"class="button">click me</button> 
+    <script>
+        function showprompt(){
+            var age = prompt("please enter your age","28");
+            switch(age){
+                case "27":alert("still  at aschool");
+                break;
+                case "26":alert("still young");
+                break;
+                case "25":alert("start lying");
+                break;
+                case "24":alert("start saving");
+                break;
+                case "23":alert("studying");
+                break;
+                default:alert("undetermined");
+            }
+        }
+    </script>
+</body>
+</html>

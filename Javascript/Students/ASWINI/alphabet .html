@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>alphabet valiadation</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form>
+        alphabet valiadtion:<input type="text" name="mobile" sie="30">
+        <button onclick="strvaliadte(document.getElementById('mobile')[0].value)">submit</button>
+    </form>
+    <script>
+        function strvaliadte(string){
+            of(string !==""){
+                var testname=;
+                if(!testname.test(string)){
+                    alert("enter only alphabetic value.");
+                }else{
+                    alert(string);
+                }
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

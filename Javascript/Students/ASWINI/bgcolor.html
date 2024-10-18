@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>background colour</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+       body{
+        background-color: pink;
+        margin: 0;
+        padding: 0;
+       }
+       .btn1{
+               background-color: rgb(87, 218, 87);
+               color:white;
+               text-align: center;
+               place-items: center;
+               justify-content: center;
+               margin-left: 500px;
+               width: 100px;
+               height: 70px;
+       }
+    </style>
+    
+</head>
+<body>
+      <div class="body">
+        <h1 style="color: white;font-size: bold;margin-left: 300px;">welcome</h1>
+        <input type="button" value="changeme" onclick="changecolor()" class="btn1" />
+        </div>
+      <script>
+        function changecolor(){
+           document.body.style.backgroundColor = "red";
+
+        }
+      </script>
+
+</body>
+</html>

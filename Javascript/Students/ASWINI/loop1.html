@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body{
+            background-color: lightblue;
+            margin: 0;
+            padding: 0;
+        }
+        .button{
+            width:15px;
+            height: 20px;
+            padding: 70px;
+            background-color:blue;
+            justify-content: center;
+            margin-top: 9PX;
+            margin-left: 9px;
+            
+                        
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <button type="button" onclick= "showconfirm()"class="button">click me</button>
+
+    </div>
+    <script>
+        function showconfirm(){
+            var confirmstatus = confirm ("press a button!");
+            if(confirmstatus == true){
+                alert("you pressed okay!")
+            }else{
+                
+            }
+        }
+    </script>
+    
+</body>
+</html>
