@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Application form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+        .leftsidebar{
+            background-color: cadetblue;
+            width: 200px;
+            height: 800px;
+        }
+        .rightsidebar{
+            justify-content: center;
+            left: 5px;
+            margin: 5px;
+            margin-top: -807px;
+        }
+        .fieldset{
+            color: aqua;
+            margin: 2em 0;
+            padding: 3em 2em;
+            border: solid 2px black;
+            border-radius: 6px;
+            width: 50px;
+            height: 70px;
+        }
+        .legend{
+            font-size: 2.2em;
+            padding: 0 .25em;
+            color:white ;
+        }
+        .header{
+            background-color: lightblue;
+            width: 1500px;
+            height: 100px;
+        }
+
+        .h2{
+            color: #000;
+            text-align: center;
+            font-size: bold;
+        }
+        .forms{
+            margin-top: 9px;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 6px;
+            height: 100vh;
+            width: 70%;
+            margin-left: 312px;
+        }
+        
+        .input[text]{
+            box-sizing: 5px;
+            border-color: 1px gray solid;
+            border-width: 50px;
+            height: 15px;
+
+            
+        }
+        .input [textarea]{
+            height: 200px;
+            width: 150px;
+        }
+        
+        
+        .btn{
+            background-color: green;
+            width: 70px;
+            height: 40px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+       <div class="header">   <h2 class="h2">JOB APPLICATION FORM</h2>
+        <P style="text-align: center;">Please fill out the form below to submit your job appllication!</P>
+        <hr>
+    </div>
+    <div class="leftsidebar">
+
+    </div>
+    <div class="rightsidebar"style:m>
+        <fieldset>
+            <legend>wwww</legend>
+            <form name="myforms"class="forms" > 
+            <label style="text-align: center;">NAME*</label>
+            <br>
+            <input type="text"placeholder="first name" name="userid">
+            <span><input type="text"placeholder="lastname" name="userid1"/></span>
+            <br>
+            <br>
+            <label>email</label>
+            <br>
+            <input type="text"placeholder="email" name="email1">
+            <br>
+            <label>phone number</label>
+            <br>
+            <input type="text" placeholder="(000)000-000" name="myphone"/>
+            <br>
+            <label>last date</label>
+            <br>
+            <input type="text" placeholder="mm-dd-yy" name="ddmmyy">
+            <br>
+            <label>upload resume</label>
+            <br>
+            <input type="text" placeholder="upload a file" style="height: 70px;width: 100px;"name="upload">
+            <br>
+            <br>
+            <input type="button" name="submit" value="submit"class="btn" onclick="formvalidation()"> 
+        </form>
+        </fieldset>
+    </div>
+          
+          <script>
+            function formvalidation(){
+                var x = document.forms["myforms"]["userid"].value;
+                if(x==null||x=="")
+                {
+                    alert('first name must be filledout');
+                    return false;
+                } 
+            
+         
+                 var y = document.forms["myforms"]["userid1"].value;
+                if (y==null||y=="")
+                {
+                    alert('please fill this field');
+                     return false;
+                }                            
+        
+                 var inputvalue=document.forms["myforms"]["email1"].value;  
+                 
+                 var emailPattern =/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                     if(!emailPattern.test(inputvalue))
+                     {
+                         alert('invalid email id');
+                         return false;
+                        
+                     }
+                         
+                     var  charcode = document.forms["myforms"]["myphone"].value; 
+                    if(charcode<48 || charcode>57)
+                        {
+                            alert("enter number only.");
+                            return false;
+                        }
+                        var submit= document.forms["myforms"]["submit"].value;
+                        if(x ===""||y===""||emailPattern===""||charcode===""){
+                            alert("please fill all the fields!");
+                        }else{
+                            alert("form is valid!submitting..");
+                        }
+                    }
+        
+        
+          </script>
+        
+
+</body>
+</html>
