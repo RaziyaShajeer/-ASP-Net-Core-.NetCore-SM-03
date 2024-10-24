@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>LOGIN PAGE</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body{
+            background: linear-gradient(to right,#0f2027,#203a43,#2c5364);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #form{
+            width: 500px;
+            margin: 20vh auto 0 auto;
+            padding: 20px;
+            background-color: whitesmoke;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .h2{
+            color: rgb(15, 223, 32);
+            text-align: center;
+        }
+         .button{
+            padding: 10px;
+            margin-top: 10px;
+            width: 70PX;
+            color: white;
+            background-color: green;
+            margin-left: 50px;
+        }
+        .input-control{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .input-control input{
+            border: 2px solid #f0f0f0;
+            border-radius: 4px;
+            display: block;
+            font-size: 12px;
+            padding: 10px;
+            width: 70%;
+        }
+         
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form name="form1"id="form">
+            <div class="h2">  <h2>Registreation</h2>
+            </div>
+            <div class="input-control">
+            <label>username</label>
+            <input type="text" name="userid" placeholder="username">
+            </div>
+            <div class="input-control">
+            <label>email</label>
+            <input type="text" name="email1"placeholder="email">
+            </div>
+            <div class="input-control">
+            <label>password</label>
+            <input type="text" name="pass"placeholder="password">  
+            </div>
+            <div class="input-control">
+            <label>password again</label>
+            <input type="text" name="pass2" >
+            </div>
+            <br>
+            <br>
+            <div class="button">
+            <button onclick="formvalidation()"name="signup">signup</button>
+            </div>    
+          </form>
+          </div> 
+          <script>
+          function formvalidation(){
+            const x =document.forms["form1"]["userid"].value;
+            if(x==null||x==""){
+                alert("first name must be filled out!");
+                return false;
+            }
+            const y =document.forms["form1"]["email1"].value;
+            const emailPattern =/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if(!emailPattern.test(y)){
+                alert("invalid email id!");
+                return false;
+
+            }
+            const z = document.forms["form1"]["pass"].value;
+            if(z.length<8){
+                alert("it must be 8 characters!");
+                return false;
+            }
+            const a =document.forms["form1"]["pass2"].value;
+            if(!z==a){
+                alert("password is not match!");
+                return false;
+            } 
+            const button = document.forms["forms1"]["signup"].value;
+            if(x==""||y==""||z==""||a==""){
+                alert("plaese fill all the field!");               
+            }else{
+                alert("form is valid!submitting");
+        }
+    }
+    </script>
+ 
+    
+</body>
+</html>
