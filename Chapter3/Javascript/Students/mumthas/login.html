@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='login.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="form_validate()">
+            <h1>Login</h1>
+            <input type="text" placeholder="Enter your mail Address" id="email"><br>
+            <input type="password" placeholder="Enter your password" id="pswd1"><br>
+            <input type="password" placeholder="confirm password" id="pswd2"><br>
+            <button type="submit" id="submitbtn" >SUBMIT</button>
+        </form>
+    </div>
+    <script>
+        function form_validate(){
+            var email=document.getElementById('email').value;
+            var pw1=document.getElementById('pswd1').value;
+            var pw2=document.getElementById('pswd2').value;
+            if(email !==""){
+                var pattern=/^[^\s@]+@[^\s@]+\.[^s@]+$/;
+                if(!pattern.test(email)){
+                    alert('enter valid email');
+            }
+            }
+            if(pw1 ==""){
+                alert('Type a password');
+                return false;
+            }
+            if(pw2 ==""){
+                alert('Type a password');
+                return false;
+            
+           }
+           if(pw1.length < 6){
+             alert('password must be atleast 6 letters');
+             return false;
+           }
+           if(pw1 == pw2){
+            alert('password correct');
+            return false;
+           }
+
+           else{
+            alert("signup successfully");
+           }
+        }
+    </script>
+</body>
+</html>
