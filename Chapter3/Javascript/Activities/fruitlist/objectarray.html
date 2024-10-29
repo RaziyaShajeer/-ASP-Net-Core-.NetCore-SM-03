@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content{
+            font-size:25px;
+            margin-left: 30%;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="content" class="content">
+        
+    </div>
+
+    <script>
+       var fruit=[{name:"apple",color:"red",image:"images/apples.jpg"},
+                  {name:"orange",color:"orange",image:"./images/orange.jpg"},
+                  {name:"grapes",color:"purple",image:"./images/grapes.jpg"}
+                ];
+                fruitlist();
+                function fruitlist(){
+                    var content=document.getElementById("content");
+                    
+                    for(var i in fruit){
+                        var contentdiv=document.createElement('p');
+                        var image=document.createElement('img');
+                        image.src=fruit[i].image;
+                        var name=document.createElement('p');
+                        name.textContent=fruit[i].name;
+                        var color=document.createElement('p');
+                        color.textContent=fruit[i].color;
+                        contentdiv.appendChild(image);
+                        contentdiv.appendChild(name);
+                        contentdiv.appendChild(color);
+                         content.appendChild(contentdiv);
+
+                        
+                    }
+                }
+    </script>
+</body>
+</html>
