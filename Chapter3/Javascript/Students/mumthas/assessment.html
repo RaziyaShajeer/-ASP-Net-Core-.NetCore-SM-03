@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assessment.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div id="validation_form">
+        <form >
+        <h2 id="form">Contact Form</h2>
+        <input type="text" placeholder="User's name" id="username">
+        <input type="text" placeholder="Email" id="email">
+        <input type="text" placeholder="Message" id="Message"><br>
+        <button type="button" Onsubmit="click()">Submit</button>
+        </form>
+    </div>
+    <script>
+       function click(){
+        var username=document.getElementById("username").value;
+        var email=document.getElementById('email').value;
+        var message=document.getElementById('Message').value;
+        if(username ==""){
+            alert("please enter your name");
+        }
+        if(email !=""){
+            var pattern=/^[^\s@]+@[^\s@]+.\[^s@]+$/;
+            if (pattern.test(email)){
+                alert('Enter valid email');
+                return false;
+            }
+        }
+        if(message ==""){
+            alert('Please type your message');
+            return false;
+        }
+        if(message.length <10 ){
+            alert(' message must be atleast 10 characters');
+
+            
+
+            
+        }else{
+            alert('submit succeessfully');
+        }
+            
+       }
+    </script>
+    
+</body>
+</html>
