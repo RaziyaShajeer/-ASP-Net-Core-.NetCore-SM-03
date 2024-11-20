@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>assessment</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body{
+            background-color: rgb(137, 137, 226);
+            margin: 0;
+            padding: 0;
+        }
+#form{
+    background-color: aqua;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    border-radius: 2px solid;
+    margin-bottom: 50px;
+}
+#sub{
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+    </style>
+</head>
+<body>
+    <h1>FORM</h1>
+    <form name="myforms"id="form">
+        <label>name</label>
+        <input type="text" id="name" />
+        <br>
+        <label>phone num</label>
+        <input type="text"id="phone"/>
+        <br>
+        <label>password</label>
+        <input type="text"id="pass"/>
+        <br>
+        <button type="button" onclick="submit()"id="sub">submit</button>
+        <script>
+          
+          function submit(){
+            var x =myForms["myforms"]["name"].value;
+            document.getElementById('name')=x;
+          if(x==""){
+            alert("please fill the first name");
+            return;
+
+          }
+          var y=myForms["myforms"]["phone"].value;
+          document.getElementById('phone')=y;
+          if(charcode<48||charcode>58){
+            alert("it must needed 10 numbers");
+          }
+          var z =myForms["myforms"]["pass"].value;
+          document.getElementById('pass')=z;
+          if(z<=8){
+            alert("password must contain 8 characters");
+          }
+          if(x==""||y==""||z==""){
+            alert("please fill all the field");
+            return;
+          }
+
+          }
+        
+        </script>
+
+    </form>
+    
+</body>
+</html>
