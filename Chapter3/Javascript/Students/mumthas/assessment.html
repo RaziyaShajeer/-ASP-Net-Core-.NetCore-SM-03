@@ -6,23 +6,24 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='assessment.css'>
-    <script src='main.js'></script>
+   
 </head>
 <body>
     <div id="validation_form">
-        <form >
+        <form method="post" onsubmit="click()">
         <h2 id="form">Contact Form</h2>
         <input type="text" placeholder="User's name" id="username">
         <input type="text" placeholder="Email" id="email">
         <input type="text" placeholder="Message" id="Message"><br>
-        <button type="button" Onsubmit="click()">Submit</button>
+        <button type="button" >Submit</button>
         </form>
     </div>
     <script>
-       function click(){
-        var username=document.getElementById("username").value;
+         var username=document.getElementById("username").value;
         var email=document.getElementById('email').value;
         var message=document.getElementById('Message').value;
+       function click(){
+       
         if(username ==""){
             alert("please enter your name");
         }
