@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aitrich Blog</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .back-button {
+      margin-top: 20px;
+    }
+    .back-button:hover {
+      background-color: rgb(8, 174, 49);
+      color: #ffffff;
+    }
+    .code-box {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      overflow: auto;
+      max-height: 500px; /* Limiting max height to prevent excessive scrolling */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <img src="images/Aitrich.png" height="40" width="100">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Posts -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card mb-4">
+          <img src="images/bts10" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Blog Post Title</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget semper justo. Nullam nec semper odio.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img src="images/bts9.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Sidebar Widget</h5>
+            <p class="card-text">This is a sidebar widget. You can put additional content or links here.</p>
+          </div>
+        </div>
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Recent Posts</h5>
+            <ul class="list-group">
+              <li class="list-group-item"><a href="#">Post Title 1</a></li>
+              <li class="list-group-item"><a href="#">Post Title 2</a></li>
+              <li class="list-group-item"><a href="#">Post Title 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">© 2024 Aitrich Blog. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <!-- Code Box -->
+  <div class="container mt-4 code-box">
+    <pre>
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang=&quot;en&quot;&gt;
+      &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;Aitrich Blog&lt;/title&gt;
+        &lt;!-- Bootstrap CSS --&gt;
+        &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+        &lt;style&gt;
+         .back-button {
+            margin-top: 20px;
+          }
+          .back-button:hover {
+            background-color: rgb(8, 174, 49);
+            color: #ffffff;
+          }
+        &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+
+        &lt;!-- Navigation Bar --&gt;
+        &lt;nav class=&quot;navbar navbar-expand-lg navbar-light bg-light&quot;&gt;
+          &lt;div class=&quot;container&quot;&gt;
+            &lt;img src=&quot;images/Aitrich.png&quot; height=&quot;40&quot; width=&quot;100&quot;&gt;
+            &lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNav&quot; aria-controls=&quot;navbarNav&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+              &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbarNav&quot;&gt;
+              &lt;ul class=&quot;navbar-nav ms-auto&quot;&gt;
+                &lt;li class=&quot;nav-item&quot;&gt;
+                  &lt;a class=&quot;nav-link active&quot; aria-current=&quot;page&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;nav-item&quot;&gt;
+                  &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;About&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;nav-item&quot;&gt;
+                  &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Blog&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;nav-item&quot;&gt;
+                  &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Contact&lt;/a&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/nav&gt;
+
+        &lt;!-- Blog Posts --&gt;
+        &lt;div class=&quot;container mt-4&quot;&gt;
+          &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-md-8&quot;&gt;
+              &lt;div class=&quot;card mb-4&quot;&gt;
+                &lt;img src=&quot;images/bts10&quot; class=&quot;card-img-top&quot; alt=&quot;...&quot;&gt;
+                &lt;div class=&quot;card-body&quot;&gt;
+                  &lt;h5 class=&quot;card-title&quot;&gt;Blog Post Title&lt;/h5&gt;
+                  &lt;p class=&quot;card-text&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget semper justo. Nullam nec semper odio.&lt;/p&gt;
+                  &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Read More&lt;/a&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-4&quot;&gt;
+              &lt;div class=&quot;card mb-4&quot;&gt;
+                &lt;img src=&quot;images/bts9.jpg&quot; class=&quot;card-img-top&quot; alt=&quot;...&quot;&gt;
+                &lt;div class=&quot;card-body&quot;&gt;
+                  &lt;h5 class=&quot;card-title&quot;&gt;Sidebar Widget&lt;/h5&gt;
+                  &lt;p class=&quot;card-text&quot;&gt;This is a sidebar widget. You can put additional content or links here.&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;card mb-4&quot;&gt;
+                &lt;div class=&quot;card-body&quot;&gt;
+                  &lt;h5 class=&quot;card-title&quot;&gt;Recent Posts&lt;/h5&gt;
+                  &lt;ul class=&quot;list-group&quot;&gt;
+                    &lt;li class=&quot;list-group-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Post Title 1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;list-group-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Post Title 2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;list-group-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Post Title 3&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Footer --&gt;
+        &lt;footer class=&quot;footer mt-auto py-3 bg-light&quot;&gt;
+          &lt;div class=&quot;container&quot;&gt;
+            &lt;span class=&quot;text-muted&quot;&gt;&amp;copy; 2024 Aitrich Blog. All rights reserved.&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/footer&gt;
+
+        &lt;center&gt;&lt;a href=&quot;index.html&quot; class=&quot;btn btn-secondary back-button&quot;&gt;Back to Homepage&lt;/a&gt;&lt;/center&gt;
+
+        &lt;!-- Bootstrap Bundle with Popper --&gt;
+        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+    </pre>
+  </div>
+  <center><a href="index.html" class="btn btn-secondary back-button">Back to Homepage</a></center>
+
+</body>
+</html>

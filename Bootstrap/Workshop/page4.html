@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding Bootstrap Containers</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 20px;
+    }
+    .code-block {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 15px;
+      border-radius: 5px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .code-block code {
+      color: #ffffff; 
+    }
+    .back-button {
+      margin-top: 20px;
+    }
+    .back-button:hover {
+      background-color: rgb(8, 174, 49);
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mb-4">Understanding Bootstrap Containers</h1>
+    <h4>Definition of Containers in Bootstrap</h4>
+    <p>Containers are fundamental building blocks in Bootstrap that serve as wrappers for content. They provide horizontal padding to the content they contain, ensuring a consistent layout across different screen sizes and devices.</p>
+    <h4>Purpose of Containers</h4>
+    <p>The primary purpose of containers in Bootstrap is to center and horizontally pad the content within them. This helps create a visually pleasing and consistent layout, preventing the content from spanning the entire width of the viewport, which can make it difficult to read on larger screens.</p>
+    <h4>Different Types of Containers</h4>
+    <p>Bootstrap provides two types of containers: <code>container</code> and <code>container-fluid</code>.</p>
+    <h4>Container Class</h4>
+    <p>The <code>container</code> class is used to create a responsive, fixed-width container. It has a predefined maximum width and automatically adjusts its width based on the viewport size, ensuring a consistent and optimized layout across different devices.</p>
+    <!-- <br> -->
+    <img src="images/Picture1.png" height="200" width="300">
+    <br>
+    <div class="code-block">
+      <pre><code>&lt;div class="container"&gt;
+  &lt;!-- Your content goes here --&gt;
+  &lt;h1&gt;Hello, World!&lt;/h1&gt;
+  &lt;p&gt;This content is wrapped in a Bootstrap container.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    <br>
+    <h4>Container-Fluid Class</h4>
+    <p>The <code>container-fluid</code> class is used to create a full-width container that spans the entire width of the viewport. It doesn't have a predefined maximum width and will stretch to occupy the full available width.</p>
+    <!-- <br> -->
+    <img src="images/Picture2.png" height="200" width="300">
+    <br>
+    <div class="code-block">
+      <pre><code>&lt;div class="container-fluid"&gt;
+  &lt;!-- Your content goes here --&gt;
+  &lt;h1&gt;Welcome to our website!&lt;/h1&gt;
+  &lt;p&gt;This content is wrapped in a full-width Bootstrap container.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    <br>
+    <h4>When to Use Each Container Type</h4>
+    <ul>
+      <li>Use the <code>container</code> class when you want your content to have a fixed maximum width and be centered on the page. This is ideal for most content layouts, as it provides a comfortable reading experience and prevents the content from becoming too wide on larger screens.</li>
+      <li>Use the <code>container-fluid</code> class when you want your content to span the entire width of the viewport, such as for full-width headers, footers, or backgrounds.</li>
+    </ul>
+    <center><a href="index.html" class="btn btn-secondary back-button">Back to Homepage</a></center>
+
+  </div>
+</body>
+</html>
