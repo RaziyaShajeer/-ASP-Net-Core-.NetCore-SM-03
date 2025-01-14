@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetsApp_Arrays", "PetsApp_Arrays.csproj", "{39DFAB4F-9DC1-4553-A4A8-D72FC63F3A84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39DFAB4F-9DC1-4553-A4A8-D72FC63F3A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39DFAB4F-9DC1-4553-A4A8-D72FC63F3A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39DFAB4F-9DC1-4553-A4A8-D72FC63F3A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39DFAB4F-9DC1-4553-A4A8-D72FC63F3A84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68BAE2C1-AF70-404F-8BA2-04B20E1E6FBF}
+	EndGlobalSection
+EndGlobal
