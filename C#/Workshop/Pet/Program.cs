@@ -7,7 +7,7 @@ namespace Pet
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            string petName;
+            string petName; 
             int age;
 
             Console.WriteLine("Enter the name of Pet");
@@ -17,5 +17,5 @@ namespace Pet
             Console.WriteLine("The Name:{0}\n Age of Pet:{1}", petName, age);
             Console.ReadLine();
         }
-    }
+   
 }
