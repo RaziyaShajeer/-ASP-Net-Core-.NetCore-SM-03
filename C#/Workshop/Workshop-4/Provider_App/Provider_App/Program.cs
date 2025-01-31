@@ -91,10 +91,10 @@ namespace Provider_App // Note: actual namespace depends on the project name.
                     Console.WriteLine();
 
                 }
-                /*    else
-                    {
-                        Console.WriteLine("Login Error!");
-                    }*/
+                else
+                {
+                    Console.WriteLine("Login Error!");
+                }
             }
 
         }
