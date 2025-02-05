@@ -34,7 +34,7 @@ namespace Pet_ConditionalStatements
                         case 4: ob1.petCategory = PetCategory.Fish; break;
                         case 5: ob1.petCategory = PetCategory.Reptile; break;
                         case 6: ob1.petCategory = PetCategory.Other; break;
-                        default: Console.WriteLine("Invalid Choice please renter the choice"); chance = false; break;
+                        default: Console.WriteLine("Invalid Choice please enter the choice"); chance = false; break;
 
                     }
 
