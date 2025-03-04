@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.34909.67
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAlreadyExist-Exception", "UserAlreadyExist-Exception\UserAlreadyExist-Exception.csproj", "{028A81B6-2CF6-4EBE-B181-EDBC9F8ABFDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{028A81B6-2CF6-4EBE-B181-EDBC9F8ABFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{028A81B6-2CF6-4EBE-B181-EDBC9F8ABFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{028A81B6-2CF6-4EBE-B181-EDBC9F8ABFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{028A81B6-2CF6-4EBE-B181-EDBC9F8ABFDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A36EC786-6CC7-4F72-BF5C-4342B93AE6F0}
+	EndGlobalSection
+EndGlobal
