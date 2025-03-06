@@ -13,10 +13,10 @@ internal class Program
             ValidatePhoneNumber(phoneNumber);
             Console.WriteLine("Phone number is valid.");
         }
-        //catch (InvalidPhoneNumberException ex)
-        //{
-        //    Console.WriteLine($"Error: {ex.Message}");
-        //}
+        catch (InvalidPhoneNumberException ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
         catch (Exception ex)
         {
             Console.WriteLine($"Unexpected error: {ex.Message}");
