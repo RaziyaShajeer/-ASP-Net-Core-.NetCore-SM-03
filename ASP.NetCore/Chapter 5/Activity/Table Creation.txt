@@ -1,0 +1,131 @@
+
+Create table Using Query
+---------------------
+
+create table Employee(
+		EmpNo bigint ,EName varchar(50) ,DeptNo bigint ,Job varchar(10),HireDate datetime)
+
+create table Dept(
+		DeptNo bigint ,DName varchar(20) ,Loc varchar(20) )
+
+
+
+-----------------------------------------------------------------------------------------------------
+
+
+Create,Insert,Delete,Update,Drop
+------------------------------------------------------
+Table Creation:-
+
+1.Give Table Name 
+
+TS_Company_Master
+----------------------------
+Id
+Name
+Remarks
+
+TS_Group_Master
+----------------------------
+Id 
+Name
+Remarks
+
+TS_Item_Master
+----------------------------
+Id 
+Name
+Company_id
+Group_id
+Rate
+Remarks
+
+
+TS_Purchse_Header
+----------------------------
+Id 
+Purchse_no
+Trns_Date
+Total
+Remarks
+
+TS_Purchase_Detail
+----------------------------
+Id 
+Header_id
+Sl_no
+Item_id
+Qty
+rate
+amount
+
+
+Insert Query(TS_Company_Master)
+-------------------------------
+insert into TS_Company_Master (id,name,remarks) values (1,'P&G','')
+
+insert into TS_Company_Master (id,name,remarks) values (2,'XENICAL','')
+insert into TS_Company_Master (id,name,remarks) values (3,'J&J','')
+insert into TS_Company_Master (id,name,remarks) values (4,'JAC','')
+
+Insert Query(TS_Group_Master)
+
+insert into TS_Group_Master (id,name,remarks) values (1,'INHALER','')
+insert into TS_Group_Master (id,name,remarks) values (2,'DROPS','')
+insert into TS_Group_Master (id,name,remarks) values (3,'POWDER','')
+insert into TS_Group_Master (id,name,remarks) values (4,'OINTMENT','')
+
+Delete Query(TS_Company_Master)
+-------------------------------
+delete from TS_Company_Master 
+
+
+Delete Query(TS_Company_Master)
+-----------------------------------------------
+delete from TS_Company_Master where id=1
+
+
+Delete Query(TS_Group_Master)
+------------------------------------------
+delete from TS_Group_Master where name='INHALER'
+
+
+Update Query(TS_Company_Master)
+--------------------------------------
+update TS_Company_Master set name='P&G' where id=2
+update Employee set EName=(select EName from Employee where EmpNo=2000)
+
+Drop
+---------
+drop table TS_Company_Master
+
+Create a new table based on an existing table
+----------------------------------------------------------
+select id,name  into Copy_Company from TS_Company_Master 
+select * into Copy_TS_Company_Master  from TS_Company_Master 
+
+Alter A table
+----------------------------------------------------
+
+Alter table columnexisting data type to another
+
+ Alter table table_name Alter column column_name datatype
+
+
+ Eg: Alter table ss Alter column i varchar(30)
+
+Add new Column intto the table
+---------------------------------------------------
+
+Alter table table_name add  newcolumn_name datatype
+
+Alter table ss add New_colum bigint
+
+Renamae a table name
+0
+exec sp_rename oldtable,new_name
+
+rename databse
+exec Sp_renamedb old name,new name
+-----------------------------------------------------------
+
