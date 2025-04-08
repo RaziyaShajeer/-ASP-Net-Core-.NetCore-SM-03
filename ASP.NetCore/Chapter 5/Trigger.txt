@@ -1,0 +1,79 @@
+Trigger
+--------
+Triggers are special types of Stored Procedures that are defined to execute automatically in place of or after data modifications. They can be executed automatically 
+on the INSERT, DELETE and UPDATE triggering actions.
+
+There are two different types of triggers in Microsoft SQL Server 2000. They are INSTEAD OF triggers and AFTER triggers. These triggers differ from each other in 
+terms of their purpose and when they are fired. 
+
+TaBLES:-
+
+
+Tables:-
+
+Purchase
+==========
+id(primary key)
+item_id
+quantity
+amount
+
+Stock
+======
+id
+item_id
+quantity
+
+Sales
+=========
+id(primary key)
+item_id
+quantity
+amount
+
+
+create trigger to increment stock when purchase an item
+create trigger to decrement stock when sales an item
+
+Trigger
+=========
+
+Create trigger [add_stock] on [dbo].[Purchase] for insert
+as
+begin
+	declare @qty as float,@item_no as bigint,@id as bigint,@stock as float
+	select @qty=(select quantity from inserted)
+	select @item_no=(select item_id from inserted)
+	set @stock=(select count(*) from stock where item_id=@item_no)
+	if(@stock>0)
+		begin
+			update stock set quantity=quantity+@qty where item_id=@item_no
+		end
+	else
+		begin
+			set @id=(select isnull(max(id),0)+1 from stock)
+			insert into stock values(@id,@item_no,@qty)
+		end
+end
+
+===================================================================================================
+
+Create trigger [less_stock] on [dbo].[Sales] for insert
+as
+begin
+	declare @qty as float,@item_no as bigint,@id as bigint,@stock as float
+	select @qty=(select quantity from inserted)
+	select @item_no=(select item_id from inserted)
+	set @stock=(select count(*) from stock where item_id=@item_no)
+	if(@stock>0)
+		begin
+			update stock set quantity=quantity-@qty where item_id=@item_no
+		end
+	else
+		begin
+			set @id=(select isnull(max(id),0)+1 from stock)
+			insert into stock values(@id,@item_no,@qty)
+		end
+end
+===============================================================================================
+
