@@ -1,0 +1,86 @@
+Stored Procedure
+-----------------------
+A stored procedure is a set of SQL commands that has been compiled and stored on the datatbase server.
+Once the stored procedure has been stored,client applications can execute the stored procedure over and 
+over again without sending it to the database server again and without compiling it again.
+Stored procedures improve performance by reducing network traffic and CPU load.
+
+1.Give Table Name 
+
+TS_Company_Master
+----------------------------
+Id
+Name
+Remarks
+
+
+Insert procedure:-
+
+CREATE proc TS_Company_Master_Insert
+(
+@v_name as varchar(50),
+@v_remarks as varchar(250)
+)
+as
+declare @v_id as int
+begin
+select @v_id= (select isnull(max(id),0)+1 from TS_Company_Master)
+insert into TS_Company_Master(id,name,remarks)
+values (@v_id,@v_name,@v_remarks)
+end
+GO
+
+exec TS_Company_Master_Insert 'Alex','Good'
+
+
+
+Update Procedure:-
+
+CREATE proc TS_Company_Master_Update
+(
+@v_id as int,
+@v_name as varchar(50),
+@v_remarks as varchar(250)
+)
+as
+begin
+update TS_Company_Master set name = @v_name,remarks = @v_remarks where id = @v_id
+end
+GO
+
+
+exec TS_Company_Master_Update 5,'Sam','Average'
+
+
+
+Delete Procedure:-
+
+CREATE PROCEDURE deleteProc
+(
+    @v_id INT
+) 
+AS
+BEGIN
+       DELETE FROM TS_Company_Master WHERE id = @v_id;
+END
+GO
+
+
+EXEC deleteproc 5
+
+
+CREATE PROCEDURE SelectProc2
+(
+    @v_id INT
+)
+AS
+BEGIN
+    
+    SELECT * FROM TS_Company_Master WHERE id = @v_id;
+END
+GO
+
+
+EXEC SelectProc2  4
+
+
