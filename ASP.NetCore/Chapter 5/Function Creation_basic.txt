@@ -1,0 +1,111 @@
+
+UserDefined Functions
+---------------------------------
+A user defined function is a routine that encapsulates useful logic for uese in other queries. while views are limited to a 
+single SELECT statement , user defined function can have multiple SELECT statements and provide more powerful logic than possible with views.
+
+1.
+Scalar - Valued Function: Return a single value
+2.
+Table - Valued Function: Return no.of rows & columns
+
+
+	1.Basic - scalar Function return int
+	--------------------------------------
+
+	create	FUNCTION	dbo.employee_number()
+	RETURNS	bigint
+	as 
+	BEGIN
+		declare @employee_number as bigint
+	select @employee_number=(select isnull(max(employee_number),0)+1 from Employee)
+	    RETURN (@employee_number)
+	END
+
+        select dbo.employee_number()
+
+
+
+
+	***************
+
+
+        create	FUNCTION dbo.Get_id()
+	RETURNS	bigint
+	as 
+	BEGIN
+		declare @id as bigint
+	select @id=(select isnull(max(id),0)+1 from Employee)
+	    RETURN (@id)
+	END
+
+
+
+	select dbo.Get_id()as maxid
+
+
+
+
+
+	2.Basic - scalar Function return string
+	--------------------------------------
+
+	create FUNCTION dbo.Get_fullname
+	(
+	@field1 VarChar(50), 
+	@field2 VarChar(50)
+	)
+	RETURNS	varchar(50)
+	BEGIN
+	    RETURN (@field1 + ', ' + @field2)
+	END
+        go
+
+
+	*********
+	SELECT  dbo.Get_fullname(Name, Address)as Full_name FROM Employee
+
+
+
+
+
+	
+	3. Basic Inline Table-valued function Retrun Table
+	--------------------------------------
+
+	create FUNCTION dbo.GetTable
+	(
+	@Name VarChar(30)
+	)
+	RETURNS	Table
+	AS
+	RETURN SELECT * FROM Employee WHERE Name = @Name
+        go
+
+
+	**************
+	SELECT * from dbo.GetTable('raju')
+
+
+
+
+	4.Advanced- scalar Function return string
+	--------------------------------------
+
+	CREATE FUNCTION dbo.get_employee_number() 
+	 RETURNS varchar(50) 
+	AS  
+	BEGIN 
+
+	DECLARE @employee_number as varchar(50)
+	
+	SELECT @employee_number =(SELECT 'PU' + LEFT('00000000',8-LEN(LTRIM(STR(RIGHT(MAX(employee_number),8)+1))))+
+	 LTRIM(STR(RIGHT(MAX(employee_number),8)+1))   FROM  Employee) 
+	
+	
+	RETURN ISNULL(@employee_number,'PU'+'00000001')
+	END
+
+	*********
+	select dbo.get_employee_number() 
+
