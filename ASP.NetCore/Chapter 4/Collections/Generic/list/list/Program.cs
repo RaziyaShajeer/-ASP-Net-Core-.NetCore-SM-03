@@ -15,7 +15,7 @@ internal class Program
         foreach (string pet in petlist)
         {
            
-            Console.Write("At position {0} ", c);
+            Console.Write("At position {0} ",c);
             Console.WriteLine(pet);
             c++;
         }
