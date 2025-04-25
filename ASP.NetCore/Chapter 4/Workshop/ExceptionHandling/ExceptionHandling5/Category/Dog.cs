@@ -10,7 +10,7 @@ namespace ExceptionHandling5.Category
     public class Dog
     {
         List<Pet> dogs=new List<Pet>();
-        public void DisplayMenu()
+        public void   DisplayMenu()
         {
             try
             {
