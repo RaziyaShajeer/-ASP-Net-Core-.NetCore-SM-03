@@ -1,0 +1,28 @@
+﻿@model JobPortal_Activity.Dto.JobDto
+
+<h3>Edit Job</h3>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label>Title</label>
+        <input asp-for="Title" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label>Company</label>
+        <input asp-for="Company" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label>Location</label>
+        <input asp-for="Location" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <input asp-for="Description" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label>Salary</label>
+        <input asp-for="Salary" class="form-control" type="number" required />
+    </div>
+    <button type="submit" class="btn btn-success">Save Changes</button>
+</form>

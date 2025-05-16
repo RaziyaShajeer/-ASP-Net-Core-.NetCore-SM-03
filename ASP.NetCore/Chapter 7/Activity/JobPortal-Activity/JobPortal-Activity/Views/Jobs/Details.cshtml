@@ -1,0 +1,12 @@
+﻿@model JobPortal_Activity.Models.Job
+
+<h2>Job Details</h2>
+<p><strong>Title:</strong> @Model.Title</p>
+<p><strong>Company:</strong> @Model.Company</p>
+<p><strong>Location:</strong> @Model.Location</p>
+<p><strong>Salary:</strong> $@Model.Salary</p>
+<p><strong>Description:</strong> @Model.Description</p>
+
+<a asp-action="Index" class="btn btn-secondary">Back</a>
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+

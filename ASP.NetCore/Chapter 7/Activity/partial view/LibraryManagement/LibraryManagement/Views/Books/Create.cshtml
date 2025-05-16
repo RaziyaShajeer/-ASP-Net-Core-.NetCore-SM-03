@@ -1,0 +1,16 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "Add Book";
+}
+
+<h2>Add New Book</h2>
+
+<form asp-action="Create" method="post">
+    @Html.Partial("_BookFormPartial", Model)
+    <button type="submit" class="btn btn-success">Add</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

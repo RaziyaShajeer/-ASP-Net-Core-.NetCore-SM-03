@@ -1,0 +1,35 @@
+﻿<!--IEnumerable<T> is an interface in C# that represents a collection of objects
+    that can be iterated over using a foreach loop.
+    It is part of the System.Collections.Generic namespace.-->
+@model IEnumerable<JobPortal_Activity.Dto.JobDto>
+
+<h2>Job Listings</h2>
+<a asp-action="Create" class="btn btn-primary">Add New Job</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Company</th>
+            <th>Location</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var job in Model)
+        {
+            <tr>
+                <td>@job.Title</td>
+                <td>@job.Company</td>
+                <td>@job.Location</td>
+                <td>@job.Salary</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@job.Id" class="btn btn-info">View</a>
+                    <a asp-action="Edit" asp-route-id="@job.Id" class="btn btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@job.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
