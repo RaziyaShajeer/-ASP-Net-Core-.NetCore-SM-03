@@ -1,0 +1,47 @@
+﻿@model MVCassessment.Models.Vehicle
+
+@{
+    ViewData["Title"] = "Add Vehicle Page";
+
+}
+ <h2>@ViewData["Title"]</h2>
+ <form asp-action="Create" asp-controller="Vehicle" method="post">
+   
+     <div class="form-group">
+         <label asp-for="VehicleModel" class="form-label"></label>
+         <input type="text" asp-for="VehicleModel" class="form-control"  required/>
+         <span asp-validation-for="VehicleModel" class="text-danger"></span>
+
+     </div>
+
+    <div class="form-group">
+        <label asp-for="Category" class="form-label"></label>
+        <input type="radio" asp-for="Category" value="CategoryI" />CategoryI
+        <input type="radio" asp-for="Category" value="CategoryII" />CategoryII
+
+    </div>
+    <div class="form-group">
+        <label asp-for="RentPerDay" class="form-label"></label>
+        <input type="text" asp-for="RentPerDay" class="form-control" required />
+        <span asp-validation-for="RentPerDay" class="text-danger"></span>
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IsAvailableVehicle" class="form-label"></label>
+        <select asp-for="IsAvailableVehicle">
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-success">Add Vehicle</button>
+        <a asp-action="DashBoard" asp-controller="Vehicle" class="btn btn-warning">Cancel</a>
+    </div>
+ </form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
